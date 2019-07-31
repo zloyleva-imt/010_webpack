@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname,'dist'),
@@ -8,7 +9,12 @@ module.exports = {
     },
     watch: true,
     watchOptions: {
-        ignore: /node_modules/
+        ignored: /node_modules/
+    },
+    devServer:{
+        contentBase: path.resolve(__dirname,'dist'),
+        compress: true,
+        port: 9000
     },
     module:{
         rules: [
