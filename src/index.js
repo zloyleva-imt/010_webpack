@@ -1,5 +1,3 @@
-import users from './users';
-import style from './style.css';
+import style from './style.scss';
 
 console.log('Webpack was build...');
-// console.log("User: ", users);
